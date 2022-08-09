@@ -50,6 +50,15 @@ body {margin:50px}
 
   }
 
+  .main a{
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .main a:hover {
+    color: #7c7c7c;
+  }
+
 img {
     Padding: 50px,50px;
 }
