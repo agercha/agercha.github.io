@@ -59,6 +59,20 @@ body {margin:50px}
     color: #7c7c7c;
   }
 
+.dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.dropdown-content {
+  display: none;
+  /* position: absolute; */
+  font-size: 6px;
+  margin-left: 2em;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
 img {
     Padding: 50px,50px;
 }
