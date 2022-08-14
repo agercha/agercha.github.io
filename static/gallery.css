@@ -16,6 +16,11 @@ p {
     font-size: 12px;
 }
 
+ol { 
+  font-family: 'Albert Sans'; 
+  font-size: 12px;
+}
+
 body {margin:50px}
 
 .sidenav {
