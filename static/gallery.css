@@ -80,6 +80,7 @@ body {margin:50px}
 
 img {
     Padding: 50px,50px;
+    loading: lazyl
 }
 .padding {
     padding: 50px 25px 50px 25px;
