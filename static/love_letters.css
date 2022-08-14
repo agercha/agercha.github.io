@@ -25,8 +25,8 @@ button {
     border-color: white;
     border: 0px solid black;
     padding: 14px 28px;
-    font-size: 12px;
-    font-family: Albert Sans;
+    /* font-size: 12px; */
+    /* font-family: Albert Sans; */
     cursor: pointer;
 }
 
