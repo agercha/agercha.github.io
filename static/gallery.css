@@ -23,6 +23,14 @@ ol {
 
 body {margin:50px}
 
+/* img {
+  -webkit-filter: blur(20px);
+}
+
+img:hover{
+  -webkit-filter: blur(0px);
+} */
+
 .sidenav {
     height: 100%;
     width: 160px;

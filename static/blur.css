@@ -1,0 +1,7 @@
+img {
+    -webkit-filter: blur(20px);
+  }
+  
+  img:hover{
+    -webkit-filter: blur(0px);
+  }
