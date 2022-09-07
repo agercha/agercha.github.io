@@ -11,14 +11,14 @@
         };
         function choosePic(i) {
             oldpic = document.getElementById("myPicture" + i).src;
-            myPix = myPix.filter(function(value, index, arr){ 
-                return value != oldpic;
-            });
             var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
             while (myPix.includes(randomPic)) {
                 randomPic = allPix[Math.floor(Math.random() * allPix.length)];
             }
             document.getElementById("myPicture" + i).src = randomPic;
+            myPix = myPix.filter(function(value, index, arr){ 
+                return value != oldpic;
+            });
             myPix.push(randomPic);
         };
         function chooseAllPics() {
@@ -51,11 +51,10 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-top: -50px;
-            margin-left: -50px;
-            width: 100px;
-            height: 100px;
-            padding: 10px;
+            margin-top: -200px;
+            margin-left: -200px;
+            width: 400px;
+            height: 400px;
             text-align: center;
             background-color: white;
         }
@@ -69,10 +68,11 @@
     <img src="images/spacer.gif" width="50%" id="myPicture4" alt="some image" onclick="choosePic(4)">
     <button class="open-button" onclick="openInfo()" style="position: absolute; top:10px; right: 10px">info</button>
     <div class="form-popup" id="myInfo">
+        <h1>pgh oracle</h1>
         <p>
-            hello
+            some info
         </p>
-        <button class="open-button" onclick="closeInfo()" style="position: absolute; bottom: 10x; right: 10px">close</button>
+        <button class="close-button" onclick="closeInfo()" style="position: relative; bottom: 10x; right: 10px">close</button>
     </div>
 </body>
 </html>
