@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Random Image</title>
+     <script>
+        window.onload = chooseAllPics;
+        var allPix = new Array();
+        var myPix = new Array();
+        for (var i = 1; i < 16; i++) {
+            allPix.push("pics/"+ i + ".jpg");
+        };
+        function choosePic(i) {
+            oldpic = document.getElementById("myPicture" + i).src;
+            myPix = myPix.filter(function(value, index, arr){ 
+                return value != oldpic;
+            });
+            var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+            // while (myPix.includes(randomPic)) {
+            //     var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+            // }
+            document.getElementById("myPicture" + i).src = randomPic;
+            myPix.push(randomPic);
+        };
+        function chooseAllPics() {
+            choosePic(1);
+            choosePic(2);
+            choosePic(3);
+            choosePic(4);
+        };
+        // crop all pics to 5:3 ratio
+     </script>
+     <style>
+        body {margin:0; 
+            padding:0;
+        }
+        img {margin:0; 
+            padding:0; 
+            display:block;
+            float:left;
+            width: 50%; 
+            height: 50vh; 
+            object-fit: cover;
+        }
+     </style>
+     <link rel="stylesheet" href="script01.css">
+</head>
+<body>
+     <img src="images/spacer.gif" width="50%" id="myPicture1" alt="some image" onclick="choosePic(1)">
+     <img src="images/spacer.gif" width="50%" id="myPicture2" alt="some image" onclick="choosePic(2)">
+     <img src="images/spacer.gif" width="50%" id="myPicture3" alt="some image" onclick="choosePic(3)">
+     <img src="images/spacer.gif" width="50%" id="myPicture4" alt="some image" onclick="choosePic(4)">
+</body>
+</html>
