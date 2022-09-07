@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Random Image</title>
+     <script>
+        window.onload = chooseAllPics;
+        var allPix = new Array();
+        var myPix = new Array();
+        for (var i = 1; i < 16; i++) {
+            allPix.push("pics/"+ i + ".jpg");
+        };
+        function choosePic(i) {
+            oldpic = document.getElementById("myPicture" + i).src;
+            var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+            while (myPix.includes(randomPic)) {
+                randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+            }
+            document.getElementById("myPicture" + i).src = randomPic;
+            myPix = myPix.filter(function(value, index, arr){ 
+                return value != oldpic;
+            });
+            myPix.push(randomPic);
+        };
+        function chooseAllPics() {
+            choosePic(1);
+            choosePic(2);
+            choosePic(3);
+            choosePic(4);
+        };
+        function openInfo() {
+            document.getElementById("myInfo").style.display = "block";
+        };
+        function closeInfo() {
+            document.getElementById("myInfo").style.display = "none";
+        } 
+     </script>
+     <style>
+        body {margin:0; 
+            padding:0;
+        }
+        img {margin:0; 
+            padding:0; 
+            display:block;
+            float:left;
+            width: 50%; 
+            height: 50vh; 
+            object-fit: cover;
+        }
+        .form-popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+        }
+     </style>
+     <link rel="stylesheet" href="script01.css">
+</head>
+<body>
+    <img src="images/spacer.gif" width="50%" id="myPicture1" alt="some image" onclick="choosePic(1)">
+    <img src="images/spacer.gif" width="50%" id="myPicture2" alt="some image" onclick="choosePic(2)">
+    <img src="images/spacer.gif" width="50%" id="myPicture3" alt="some image" onclick="choosePic(3)">
+    <img src="images/spacer.gif" width="50%" id="myPicture4" alt="some image" onclick="choosePic(4)">
+    <button class="open-button" onclick="openInfo()" style="position: absolute; top:10px; right: 10px">info</button>
+    <div class="form-popup" id="myInfo">
+        <p>
+            hello howare you <br> sldkfjs <br> ldjsf
+        </p>
+        <button class="close-button" onclick="closeInfo()" style="position: relative; bottom: 10x; right: 10px">close</button>
+    </div>
+</body>
+</html>
