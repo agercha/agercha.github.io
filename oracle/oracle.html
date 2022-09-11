@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="oracle.js"></script>
+        <style>
+            body {margin:0; 
+                padding:0;
+            }
+            img {margin:0; 
+                padding:0; 
+                display:block;
+                float:left;
+                width: 50%; 
+                height: 50vh; 
+                object-fit: cover;
+            }
+            .form-popup {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -200px;
+                margin-left: -200px;
+                width: 400px;
+                height: 400px;
+                text-align: center;
+                background-color: white;
+            }
+
+        </style>
+        <link rel="stylesheet" href="script01.css">
+    </head>
+    <body>
+        <img src="images/spacer.gif" width="50%" id="myPicture1" alt="some image" onclick="choosePic(1)">
+        <img src="images/spacer.gif" width="50%" id="myPicture2" alt="some image" onclick="choosePic(2)">
+        <img src="images/spacer.gif" width="50%" id="myPicture3" alt="some image" onclick="choosePic(3)">
+        <img src="images/spacer.gif" width="50%" id="myPicture4" alt="some image" onclick="choosePic(4)">
+        <button class="open-button" onclick="openInfo()" style="position: absolute; top:10px; right: 10px">info</button>
+        <div class="form-popup" id="myInfo">
+            <h1>pgh oracle</h1>
+            <p>
+                my fourth year in an american suburb
+            </p>
+            <button class="close-button" onclick="closeInfo()">close</button>
+        </div>
+    </body>
+</html>
