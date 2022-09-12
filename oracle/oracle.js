@@ -52,15 +52,18 @@ const allPix = [
 var myPix = new Array();
 function choosePic(i) {
     oldpic = document.getElementById("myPicture" + i).src;
+    console.log(oldpic)
     var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
     while (myPix.includes(randomPic)) {
         randomPic = allPix[Math.floor(Math.random() * allPix.length)];
     }
     document.getElementById("myPicture" + i).src = randomPic;
     myPix = myPix.filter(function(value, index, arr){ 
-        return value != oldpic;
+        return value.split("/").pop() != oldpic.split("/").pop();
     });
     myPix.push(randomPic);
+    console.log(myPix);
+    console.log(allPix);
 };
 function chooseAllPics() {
     choosePic(1);
