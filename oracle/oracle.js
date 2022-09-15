@@ -258,12 +258,12 @@ function chooseAllPics() {
 
 function clickButton(url) {
     console.log(document.getElementById("myInfo").style.backgroundImage);
-    if (document.getElementById("myInfo").style.backgroundImage === "") {
-        document.getElementById("myInfo").style.backgroundImage = url;
-        document.getElementById("myInfo").style.display = "block";
-    } else {
+    if (document.getElementById("myInfo").style.backgroundImage === url) {
         document.getElementById("myInfo").style.backgroundImage = "";
         document.getElementById("myInfo").style.display = "none";
+    } else {
+        document.getElementById("myInfo").style.backgroundImage = url;
+        document.getElementById("myInfo").style.display = "block";
     }
 }
 
