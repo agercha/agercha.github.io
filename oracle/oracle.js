@@ -235,17 +235,25 @@ const allPix = [
     "oracle_pics/DSC03611.JPG"
 ]
 var myPix = new Array();
+function notInfo() {
+    return (document.getElementById("myInfo").style.display != "block");
+}
+function notNotes() {
+    return (document.getElementById("myNotes").style.display != "block");
+}
 function choosePic(i) {
-    oldpic = document.getElementById("myPicture" + i).src;
-    var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
-    while (myPix.includes(randomPic)) {
-        randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+    if (notInfo()) {
+        oldpic = document.getElementById("myPicture" + i).src;
+        var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+        while (myPix.includes(randomPic)) {
+            randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+        }
+        document.getElementById("myPicture" + i).src = randomPic;
+        myPix = myPix.filter(function(value, index, arr){ 
+            return value.split("/").pop() != oldpic.split("/").pop();
+        });
+        myPix.push(randomPic);
     }
-    document.getElementById("myPicture" + i).src = randomPic;
-    myPix = myPix.filter(function(value, index, arr){ 
-        return value.split("/").pop() != oldpic.split("/").pop();
-    });
-    myPix.push(randomPic);
 };
 function chooseAllPics() {
     choosePic(1);
@@ -253,13 +261,17 @@ function chooseAllPics() {
     choosePic(3);
     choosePic(4);
 };
-function openInfo() {
-    if (document.getElementById("myInfo").style.display == "block") {
+function clickInfo() {
+    if (document.getElementById("myInfo").style.display === "block") {
         document.getElementById("myInfo").style.display = "none";
     } else {
         document.getElementById("myInfo").style.display = "block";
     }
 };
-function closeInfo() {
-    document.getElementById("myInfo").style.display = "none";
-} 
+function clickNotes() {
+    if (document.getElementById("myNotes").style.display === "block") {
+        document.getElementById("myNotes").style.display = "none";
+    } else {
+        document.getElementById("myNotes").style.display = "block";
+    }
+};

@@ -1,44 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="oracle.css">
         <script src="oracle.js"></script>
-        <style>
-            body {margin:0;
-                padding:0;
-                /* margin-left:200px; 
-                margin-right:200px; 
-                background-color: black; */
-            }
-            img {margin:0; 
-                padding:0; 
-                display:block;
-                float:left;
-                width: 50%; 
-                height: 50vh; 
-                object-fit: cover;
-            }
-            .form-popup {
-                display: none;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -300px;
-                margin-left: -400px;
-                width: 800px;
-                height: 600px;
-                /* margin-top: -221px;
-                margin-left: -425px;
-                width: 850px;
-                height: 442px; */
-                text-align: center;
-                /* background-color: white; */
-                background-image: url(oracle_info_small.png);
-                /* border-radius: 25px; */
-                /* box-shadow: 5px 5px 15px #000000; */
-                filter: drop-shadow(5px 5px 15px black);
-            }
-
-        </style>
         <link rel="stylesheet" href="script01.css">
     </head>
     <body>
@@ -46,34 +10,10 @@
         <img src="images/spacer.gif" width="50%" id="myPicture2" alt="some image" onclick="choosePic(2)">
         <img src="images/spacer.gif" width="50%" id="myPicture3" alt="some image" onclick="choosePic(3)">
         <img src="images/spacer.gif" width="50%" id="myPicture4" alt="some image" onclick="choosePic(4)">
-        <button class="open-button" onclick="openInfo()" style="position: absolute; top:10px; right: 10px">info</button>
-        <div class="form-popup" id="myInfo">
-            <!-- <h1>pgh oracle</h1>
-            <h2 style="max-width: 600px; margin: 25px">my fourth year in an american suburb</h2>
-            <p style="max-width: 600px; margin: 25px">
-                i love taking photos in pittsburgh. 
-                i spent my coming of age here, 
-                living alone for the first time. every moment and picture 
-                i capture i felt like i owned.
-                i conquered something about here and something about myself.
-                at the same time, this slice of american suburbia has felt so 
-                foreign to me, as a child of immigrants. it's something i was
-                never allowed to have and something i can't attain. even if i
-                am there ,it's not mine.
-                this space can never be truly mine. 
-                i am interested in photographing moments in a fleeting, 
-                casual way the same way i experience them, canonizing them in 
-                their small way, and it felt wrong to present them in a 
-                formalized photography setting. rather than curate combinations 
-                and framings, i felt that leaving it up to chance better 
-                reflects the way i experienced them.
-                i hope you get lucky with what you see, but you can never see
-                it all at once, and i can't promise they will come back.
-            </p> -->
-            <!-- <button class="close-button" onclick="closeInfo()" style="position: absolute; bottom:25px; right:25px;float:right;">
-                close
-            </button> -->
-        </div>
+        <button class="open-button" onclick="clickInfo()" style="position: absolute; top:10px; right: 10px">info</button>
+        <button class="open-button" onclick="clickNotes()" style="position: absolute; top:40px; right: 10px">notes</button>
+        <div class="form-popup" id="myInfo">    </div>
+        <div class="form-popup" id="myNotes">   </div>
         <a href="..">
             <button class="open-button" style="position: absolute; bottom:10px; right: 10px">go home</button>
         </a>
