@@ -235,14 +235,8 @@ const allPix = [
     "oracle_pics/DSC03611.JPG"
 ]
 var myPix = new Array();
-function notInfo() {
-    return (document.getElementById("myInfo").style.display != "block");
-}
-function notNotes() {
-    return (document.getElementById("myNotes").style.display != "block");
-}
 function choosePic(i) {
-    if (notInfo()) {
+    if (document.getElementById("myInfo").style.display != "block") {
         oldpic = document.getElementById("myPicture" + i).src;
         var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
         while (myPix.includes(randomPic)) {
@@ -261,17 +255,22 @@ function chooseAllPics() {
     choosePic(3);
     choosePic(4);
 };
-function clickInfo() {
-    if (document.getElementById("myInfo").style.display === "block") {
-        document.getElementById("myInfo").style.display = "none";
-    } else {
+
+function clickButton(url) {
+    console.log(document.getElementById("myInfo").style.backgroundImage);
+    if (document.getElementById("myInfo").style.backgroundImage === "") {
+        document.getElementById("myInfo").style.backgroundImage = url;
         document.getElementById("myInfo").style.display = "block";
-    }
-};
-function clickNotes() {
-    if (document.getElementById("myNotes").style.display === "block") {
-        document.getElementById("myNotes").style.display = "none";
     } else {
-        document.getElementById("myNotes").style.display = "block";
+        document.getElementById("myInfo").style.backgroundImage = "";
+        document.getElementById("myInfo").style.display = "none";
     }
-};
+}
+
+function clickInfo() {
+    clickButton("url(\"oracle_info_small.png\")");
+}
+
+function clickNotes() {
+    clickButton("url(\"notes.png\")");
+}

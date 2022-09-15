@@ -20,10 +20,5 @@ img {margin:0;
   width: 800px;
   height: 600px;
   filter: drop-shadow(5px 5px 15px black);
-}
-#myInfo {
-  background-image: url(oracle_info_small.png);
-}
-#myNotes {
-  background-image: url(notes.png);
+  background-image: "";
 }
