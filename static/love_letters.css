@@ -13,3 +13,19 @@
     background: url("../love_letters/open.png")  no-repeat;
     filter: drop-shadow(4px 4px 3px black);
 }
+
+body {
+    margin: 25vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    font-size: 0.85vw;
+    
+}
+
+p {
+    padding-bottom: 0.5vw;
+    /* text-indent: 2vw; */
+    line-height: 1vw;
+    /* letter-spacing: 0.05vw; */
+    word-spacing: 0.2vw;
+}
