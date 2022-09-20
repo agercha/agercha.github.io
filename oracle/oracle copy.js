@@ -1,6 +1,6 @@
 window.onload = chooseAllPics;
 
-var allPix = [
+const allPix = [
     "oracle_pics/DSC03620.JPG",
     "oracle_pics/DSC03608.JPG",
     "oracle_pics/DSC03813.JPG",
@@ -234,21 +234,19 @@ var allPix = [
     "oracle_pics/DSC03836.JPG",
     "oracle_pics/DSC03611.JPG"
 ]
-var oldPix = new Array();
+var myPix = new Array();
 function choosePic(i) {
     if (document.getElementById("myInfo").style.display != "block") {
-        if (allPix.length === 0) {
-            allPix = oldPix.slice();
-            oldPix = new Array;
-        } else {
-            oldpic = document.getElementById("myPicture" + i).src;
-            oldPix.push(oldpic);
-            var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
-            document.getElementById("myPicture" + i).src = randomPic;
-            allPix = allPix.filter(function(value, index, arr){ 
-                return value.split("/").pop() != randomPic.split("/").pop();
-            });
+        oldpic = document.getElementById("myPicture" + i).src;
+        var randomPic = allPix[Math.floor(Math.random() * allPix.length)];
+        while (myPix.includes(randomPic)) {
+            randomPic = allPix[Math.floor(Math.random() * allPix.length)];
         }
+        document.getElementById("myPicture" + i).src = randomPic;
+        myPix = myPix.filter(function(value, index, arr){ 
+            return value.split("/").pop() != oldpic.split("/").pop();
+        });
+        myPix.push(randomPic);
     }
 };
 function chooseAllPics() {
