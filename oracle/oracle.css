@@ -21,6 +21,7 @@ body {margin:0;
     object-fit: cover;
   }
 }
+
 .form-popup {
   display: none;
   position: absolute;
