@@ -23,6 +23,10 @@ ol {
 
 body {margin:50px}
 
+figure {
+  float: left;
+}
+
 /* img {
   -webkit-filter: blur(20px);
 }
@@ -60,7 +64,6 @@ img:hover{
   
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-
   }
 
   .main a{
@@ -88,7 +91,7 @@ img:hover{
 
 img {
     Padding: 50px,50px;
-    loading: lazyl
+    loading: lazy
 }
 .padding {
     padding: 50px 25px 50px 25px;
