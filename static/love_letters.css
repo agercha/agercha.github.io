@@ -29,3 +29,7 @@ p {
     /* letter-spacing: 0.05vw; */
     word-spacing: 0.2vw;
 }
+
+img {
+    padding-bottom:  100px;
+}
