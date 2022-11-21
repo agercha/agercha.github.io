@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anna Gerchanovskaya</title>
+        <script>
+          function change() {
+            elem = document.getElementById("dissapear");
+            if (elem.style.display == "block") {
+              elem.style.display = "none"
+            } else {
+              elem.style.display = "block"
+            }
+          }
+        </script>
+    </head>
+
+    <body>
+        <button onclick="change()">
+          click meee
+        </button>
+        <p id="dissapear" style="display:none">
+          this is some dissapearing text
+        </p>
+    </body>
+</html>
