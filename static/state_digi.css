@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color:rgb(0, 255, 0);
+    font-family: "Menlo";
+    /* Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace */
+}
+
+img {
+    width: 300px;
+    /* outline: ; */
+    outline-width: 2px;
+    outline-color:aqua;
+    outline-style: dotted;
+    outline-offset: 5px;
+}
